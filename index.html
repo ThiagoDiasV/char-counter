@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Calculadora de caracteres em textos" />
+    <meta name="keywords" content="calculadora, caracteres, texto" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <title>Calculadora de caracteres</title>
+  </head>
+  <body>
+    <div class="container mt-4">
+      <h1>Calculadora de caracteres</h1>
+      <p>
+        Digite ou cole seu texto abaixo e clique no botão para calcular quantos
+        caracteres tem seu texto.
+      </p>
+      <div class="row">
+        <div class="col-sm-8">
+          <form>
+            <div class="form-group">
+              <textarea
+                class="form-control"
+                name="texto"
+                id="text"
+                rows="3"
+              ></textarea>
+              <div id="radio-options">
+                <div class="form-check mt-3">
+                  <input
+                    class="form-check-input"
+                    name="radio-buttons"
+                    type="radio"
+                    id="com-espacos"
+                    value="1"
+                  />
+                  <label for="com-espacos"
+                    >Calcular caracteres incluindo espaços</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    name="radio-buttons"
+                    type="radio"
+                    id="sem-espacos"
+                    value="2"
+                  />
+                  <label for="sem-espacos"
+                    >Calcular caracteres excluindo espaços</label
+                  >
+                </div>
+              </div>
+              <button class="btn btn-block btn-primary my-4" id="button">
+                Calcular
+              </button>
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                name="result"
+                id="result"
+                class="form-control"
+                placeholder="Resultado"
+                readonly
+              />
+            </div>
+          </form>
+        </div>
+        <div class="col-sm-4 border">
+          <p>Aqui vai o adsense</p>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.js"
+      integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"
+      integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
