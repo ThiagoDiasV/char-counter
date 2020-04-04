@@ -9,6 +9,6 @@ text.addEventListener('input', function (event) {
   textWithSpaces.innerText = text.value.trim().length;
   textWords.innerText = text.value
     .trim()
-    .split(/[^a-zA-Z0-9_áàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ.]/).length;
+    .split(/[^a-zA-Z0-9_áàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ.(){}[\]]/).length;
   textLines.innerText = text.value.trim().split('\n').length;
 });
