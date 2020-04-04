@@ -15,7 +15,8 @@
   </head>
   <body>
     <div class="container mt-4">
-      <h1>Calculadora de caracteres</h1>
+      <h1 class="d-inline mr-3">Calculadora de caracteres</h1>
+      <i class="fas fa-keyboard fa-2x text-info"></i>
       <p>
         Digite ou cole seu texto abaixo e clique no botão para calcular quantos
         caracteres tem seu texto.
@@ -30,50 +31,29 @@
                 id="text"
                 rows="3"
               ></textarea>
-              <div id="radio-options">
-                <div class="form-check mt-3">
-                  <input
-                    class="form-check-input"
-                    name="radio-buttons"
-                    type="radio"
-                    id="com-espacos"
-                    value="1"
-                  />
-                  <label for="com-espacos"
-                    >Calcular caracteres incluindo espaços</label
-                  >
-                </div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    name="radio-buttons"
-                    type="radio"
-                    id="sem-espacos"
-                    value="2"
-                  />
-                  <label for="sem-espacos"
-                    >Calcular caracteres excluindo espaços</label
-                  >
-                </div>
-              </div>
-              <button class="btn btn-block btn-primary my-4" id="button">
-                Calcular
-              </button>
-            </div>
-            <div class="form-group">
-              <input
-                type="text"
-                name="result"
-                id="result"
-                class="form-control"
-                placeholder="Resultado"
-                readonly
-              />
             </div>
           </form>
+          <div class="div" id="results">
+            <ul class="list-group">
+              <li class="list-group-item">
+                Caracteres sem espaço: <span id="without-spaces"></span>
+              </li>
+              <li class="list-group-item">
+                Caracteres com espaço: <span id="with-spaces"></span>
+              </li>
+              <li class="list-group-item">
+                Palavras: <span id="words"></span>
+              </li>
+              <li class="list-group-item">Linhas: <span id="lines"></span></li>
+            </ul>
+          </div>
         </div>
         <div class="col-sm-4 border">
-          <p>Aqui vai o adsense</p>
+          <p class="text-justify">
+            O Contador de Caracteres é a solução para os seus problemas quando
+            você precisa saber quantos caracteres um determinado texto
+            apresenta. Chega de abrir o Word para contar as palavras.
+          </p>
         </div>
       </div>
     </div>
@@ -91,6 +71,10 @@
     <script
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"
       integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/22d9277103.js"
       crossorigin="anonymous"
     ></script>
   </body>

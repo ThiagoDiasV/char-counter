@@ -1,27 +1,12 @@
 const text = document.getElementById('text');
-const button = document.getElementById('button');
-const radioOptions = document.getElementsByClassName('form-check-input');
-const input = document.getElementById('result');
+const textWithoutSpaces = document.getElementById('without-spaces');
+const textWithSpaces = document.getElementById('with-spaces');
+const textWords = document.getElementById('words');
+const textLines = document.getElementById('lines');
 
-button.addEventListener('click', function (event) {
-  event.preventDefault();
-
-  for (let i = 0; i < radioOptions.length; i++) {
-    if (radioOptions[i].checked) {
-      optionSelected = radioOptions[i].value;
-      switch (optionSelected) {
-        case '1':
-          let resultWithSpaces = text.value.trim().length;
-          input.value = `${resultWithSpaces} caracteres`;
-          break;
-        case '2':
-          let resultWithoutSpaces = text.value.trim().split(' ').join('')
-            .length;
-          input.value = `${resultWithoutSpaces} caracteres`;
-          break;
-      }
-    }
-  }
-
-  //   input.value = `${text.value.trim().length} caracteres`;
+text.addEventListener('input', function (event) {
+  textWithoutSpaces.innerText = text.value.trim().split(' ').join('').length;
+  textWithSpaces.innerText = text.value.trim().length;
+  textWords.innerText = text.value.trim().split(/\W+/).length;
+  textLines.innerText = text.value.trim().split('\n').length;
 });
