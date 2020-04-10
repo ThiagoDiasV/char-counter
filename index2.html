@@ -17,13 +17,48 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
-    <title>Document</title>
+    <title>Contador de caracteres, palavras e linhas</title>
   </head>
   <!-- Código acima já visto -->
   <body>
     <div class="container mt-5">
       <h1>Calculadora de caracteres, palavras e linhas</h1>
       <p>Digite ou cole seu texto abaixo.</p>
+      <div class="row">
+        <div class="col-md-8">
+          <form>
+            <div class="form-group">
+              <textarea
+                name="texto"
+                id="text"
+                rows="3"
+                class="form-control"
+              ></textarea>
+            </div>
+          </form>
+          <div id="results">
+            <ul class="list-group">
+              <li class="list-group-item">
+                Caracteres sem espaço: <span id="without-spaces"></span>
+              </li>
+              <li class="list-group-item">
+                Caracteres com espaço: <span id="with-spaces"></span>
+              </li>
+              <li class="list-group-item">
+                Palavras: <span id="words"></span>
+              </li>
+              <li class="list-group-item">Linhas: <span id="lines"></span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4 mt-md-0 mt-3 border rounded">
+          <p>
+            O Contador de Caracteres é a solução para os seus problemas quando
+            você precisa saber quantos caracteres um determinado texto
+            apresenta. Chega de abrir o Word para contar as palavras.
+          </p>
+        </div>
+      </div>
     </div>
     <!-- Código abaixo já visto -->
     <script src="main.js"></script>

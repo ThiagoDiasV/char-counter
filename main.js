@@ -7,8 +7,6 @@ const textLines = document.getElementById('lines');
 text.addEventListener('input', function (event) {
   textWithoutSpaces.innerText = text.value.trim().split(' ').join('').length;
   textWithSpaces.innerText = text.value.trim().length;
-  textWords.innerText = text.value
-    .trim()
-    .split(/[^a-zA-Z0-9_áàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ.(){}[\]]/).length;
+  textWords.innerText = text.value.trim().split(/\s+/).length;
   textLines.innerText = text.value.trim().split('\n').length;
 });
